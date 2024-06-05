@@ -3,7 +3,8 @@
 $for(by-author)$
     \textbf{$it.name.literal$}\\%
     $for(it.affiliations)$
-        $if(it.name)$$it.name$$endif$\\%
+        $if(it.department)$$it.department$\\%
+        $endif$$if(it.name)$$it.name$$endif$\\%
         $if(it.address)$$it.address$, $endif$$if(it.city)$$it.city$, $endif$$if(it.state)$$it.state$ $endif$$if(it.region)$$it.region$ $endif$$if(it.postal-code)$$it.postal-code$ $endif$$if(it.country)$$it.country$$endif$\\%
     $endfor$
     Email: \href{mailto:$it.email$}{$it.email$}\\%
