@@ -8,7 +8,10 @@ contributes:
       csl: transportation-research-record.csl
       toc: false
       filters:
+        - quarto
+        - citeproc.lua
         - trb.lua
+      citeproc: false # disable default citation processing as it happens earlier, see https://github.com/andrewheiss/quarto-wordcount?tab=readme-ov-file#how-this-all-works
     pdf:
       include-in-header: header.tex
       documentclass: article
