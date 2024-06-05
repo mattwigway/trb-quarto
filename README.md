@@ -51,6 +51,10 @@ authors:
 
 Words and tables are counted automatically; words in tables do not count towards the total word count, and neither does the title page. You can override the word count by setting `nwords: number_of_words` in your YAML front matter, and `ntables: number_of_tables` likewise. The word count should be reliable, however the table count may fail to detect some tables depending on how they are represented in the Quarto document.
 
+## Page header
+
+By default, the page header is generated automatically, listing family names of all authors if there are three or fewer, and the first author et al. if there are more. You can override this by specifying `authorheader: "Desired header"` in your YAML front matter.
+
 ## Submission date
 
 You need to include a `date` field in your YAML front matter.

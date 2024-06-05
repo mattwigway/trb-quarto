@@ -51,6 +51,23 @@ trbfilter = {
             meta.ntables = tostring(ntables) .. " tables"
         end
         meta.nwords_with_tables = nwords + ntables * 250
+
+        -- Create the author header
+        -- see https://github.com/quarto-journals/jss/blob/a5b928a765e0d87cc40aedcbf4302b8ce2ad5c9c/_extensions/jss/jss.lua#L49-L65
+        if (meta.authorheader == nil) then
+            local byAuthor = meta['by-author']
+
+            if #byAuthor == 1 then
+                meta.authorheader = pandoc.utils.stringify(byAuthor[1].name.family)
+            elseif #byAuthor == 2 then
+                meta.authorheader = pandoc.utils.stringify(byAuthor[1].name.family) .. " and " .. pandoc.utils.stringify(byAuthor[2].name.family)
+            elseif #byAuthor == 3 then
+                meta.authorheader = pandoc.utils.stringify(byAuthor[1].name.family) .. ", " .. pandoc.utils.stringify(byAuthor[2].name.family) .. ", and " .. pandoc.utils.stringify(byAuthor[3].name.family)
+            else
+                meta.authorheader = pandoc.utils.stringify(byAuthor[1].name.family) .. " et al."
+            end
+        end
+
         return meta
     end
 }

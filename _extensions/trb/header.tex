@@ -19,5 +19,11 @@
 \titlespacing{\subsection}{0pt}{\baselineskip}{0pt}
 \titlespacing{\subsubsection}{0pt}{\baselineskip}{0pt}
 
+\usepackage{fancyhdr}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+% fancyhead is in before-body so pandoc directives are available
+\pagestyle{fancy}
+
 
 
