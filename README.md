@@ -8,7 +8,7 @@ This is a [Quarto](https://quarto.org) template for creating Transportation Rese
 To create a new article using this format:
 
 ```bash
-quarto use template mattiwgway/trb-quarto
+quarto use template mattwigway/trb-quarto
 ```
 
 This will create a new directory with an example document that uses this format.
