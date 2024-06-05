@@ -59,6 +59,10 @@ By default, the page header is generated automatically, listing family names of 
 
 You need to include a `date` field in your YAML front matter.
 
+## Abstract and keywords
+
+Include an `abstract:` and `keywords:` in your YAML front matter.
+
 ## Example
 
 Here is the source code for a minimal sample document: [template.qmd](template.qmd).
