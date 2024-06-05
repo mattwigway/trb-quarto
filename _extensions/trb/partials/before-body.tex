@@ -1,4 +1,4 @@
-\textbf{$title$}\\%
+\thispagestyle{empty}\textbf{$title$}\\%
 \\%
 $for(by-author)$
     \textbf{$it.name.literal$}\\%
@@ -10,7 +10,8 @@ $for(by-author)$
     $if(it.orcid)$ORCiD: \href{https://orcid.org/$it.orcid$}{$it.orcid$}$endif$\\%
     \\%
 $endfor$
-Word count: $nwords$ + $ntables$ (250 words per table) = $nwords_with_tables$ words
+Word count: $nwords$ + $ntables$ (250 words per table) = $nwords_with_tables$ words\\%
+\\%
 \\%
 \textit{Submitted $date$}
 \newpage
