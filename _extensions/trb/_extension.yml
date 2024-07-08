@@ -16,6 +16,7 @@ contributes:
       include-in-header: header.tex
       documentclass: article
       classoption: 12pt
+      number-sections: false
       papersize: letter
       template-partials:
         - partials/before-body.tex
